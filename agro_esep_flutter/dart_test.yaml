@@ -1,0 +1,12 @@
+# Тесты с тегом live требуют запущенного бэкенда (agro_esep_python)
+# и поэтому исключены из обычного прогона `flutter test`.
+#
+# Запуск вместе с бэкендом:
+#   cd ../agro_esep_python && uvicorn app.main:app &
+#   flutter test --run-skipped -t live
+tags:
+  live:
+    skip: "требует запущенного решателя на 127.0.0.1:8000"
+
+  export:
+    skip: "выгрузка задач для сверки с HiGHS; запускать вручную"

@@ -1,0 +1,211 @@
+{
+  "version": "demo-2026.08.2",
+  "is_demo": true,
+  "note": "ВРЕМЕННЫЕ демонстрационные нормативы. Реальная база не передана институтом. Числа правдоподобны, но условны — заменяются целиком, как только институт передаст нормативную базу и контрольный пример. Кыргызские названия (поля *_ky) — предварительные, терминологию подтверждает институт. Версия 2026.08.2: рацион разделён на пастбищную и стойловую части, добавлены закупочные цены кормов, затраты пересчитаны под уровень цен КР — доля кормов в себестоимости содержания доведена до 50-60%, как в реальном производстве. annual_cost_per_head НЕ включает стоимость кормов: корма учитываются отдельно, через посевы и закупку, иначе в целевой функции (1.1) они считались бы дважды. Закупочная цена пастбищного корма — это цена покупного грубого корма, которым хозяйство без своих пастбищ замещает выпас; она в разы выше себестоимости собственного пастбища, и в этом весь смысл: пастбище в условиях КР даёт основную экономию.",
+  "lands": [
+    {
+      "id": "irrigated",
+      "name": "Орошаемая пашня",
+      "name_ky": "Сугат айдоо жери"
+    },
+    {
+      "id": "rainfed",
+      "name": "Богарная пашня",
+      "name_ky": "Кайрак айдоо жери"
+    },
+    {
+      "id": "hayfield",
+      "name": "Сенокосы",
+      "name_ky": "Чөп чабындылар"
+    },
+    {
+      "id": "pasture",
+      "name": "Пастбища",
+      "name_ky": "Жайыттар"
+    }
+  ],
+  "crops": [
+    {
+      "id": "alfalfa",
+      "name": "Люцерна (сено)",
+      "name_ky": "Беде (чөп)",
+      "unit": "т",
+      "unit_ky": "т",
+      "yield_by_land": {
+        "irrigated": 8.0,
+        "rainfed": 4.0,
+        "hayfield": 3.0
+      },
+      "cost_by_land": {
+        "irrigated": 45000,
+        "rainfed": 22000,
+        "hayfield": 12000
+      },
+      "purchase_price_per_ton": 12000
+    },
+    {
+      "id": "silage_corn",
+      "name": "Силосная кукуруза",
+      "name_ky": "Силостук жүгөрү",
+      "unit": "т",
+      "unit_ky": "т",
+      "yield_by_land": {
+        "irrigated": 45.0,
+        "rainfed": 20.0
+      },
+      "cost_by_land": {
+        "irrigated": 90000,
+        "rainfed": 45000
+      },
+      "purchase_price_per_ton": 4500
+    },
+    {
+      "id": "barley",
+      "name": "Ячмень (зерно)",
+      "name_ky": "Арпа (дан)",
+      "unit": "т",
+      "unit_ky": "т",
+      "yield_by_land": {
+        "irrigated": 4.0,
+        "rainfed": 2.2
+      },
+      "cost_by_land": {
+        "irrigated": 40000,
+        "rainfed": 20000
+      },
+      "purchase_price_per_ton": 22000
+    },
+    {
+      "id": "pasture_grass",
+      "name": "Пастбищный корм (зелёная масса)",
+      "name_ky": "Жайыт чөбү (жашыл масса)",
+      "unit": "т",
+      "unit_ky": "т",
+      "yield_by_land": {
+        "pasture": 3.0
+      },
+      "cost_by_land": {
+        "pasture": 1500
+      },
+      "purchase_price_per_ton": 3500
+    }
+  ],
+  "products": [
+    {
+      "id": "milk",
+      "name": "Молоко",
+      "name_ky": "Сүт",
+      "unit": "т/год",
+      "unit_ky": "т/жыл"
+    },
+    {
+      "id": "meat",
+      "name": "Мясо (привес)",
+      "name_ky": "Эт (кошумча салмак)",
+      "unit": "т/год",
+      "unit_ky": "т/жыл"
+    }
+  ],
+  "breed_products": [
+    {
+      "breed_id": "alatau",
+      "breed_name": "Алатауская",
+      "breed_name_ky": "Алатоо тукуму",
+      "product_id": "milk",
+      "product_name": "Молоко",
+      "product_name_ky": "Сүт",
+      "yield_per_head": 4.2,
+      "annual_cost_per_head": 32000,
+      "feed_need": {
+        "pasture_grass": 7.5,
+        "alfalfa": 1.8,
+        "silage_corn": 5.5,
+        "barley": 1.3
+      }
+    },
+    {
+      "breed_id": "alatau",
+      "breed_name": "Алатауская",
+      "breed_name_ky": "Алатоо тукуму",
+      "product_id": "meat",
+      "product_name": "Мясо (привес)",
+      "product_name_ky": "Эт (кошумча салмак)",
+      "yield_per_head": 0.19,
+      "annual_cost_per_head": 30000,
+      "feed_need": {
+        "pasture_grass": 6.5,
+        "alfalfa": 0.9,
+        "silage_corn": 3.0,
+        "barley": 0.6
+      }
+    },
+    {
+      "breed_id": "aulie",
+      "breed_name": "Аулиеатинская",
+      "breed_name_ky": "Аулиеата тукуму",
+      "product_id": "milk",
+      "product_name": "Молоко",
+      "product_name_ky": "Сүт",
+      "yield_per_head": 3.6,
+      "annual_cost_per_head": 29000,
+      "feed_need": {
+        "pasture_grass": 7.2,
+        "alfalfa": 1.6,
+        "silage_corn": 4.8,
+        "barley": 1.1
+      }
+    },
+    {
+      "breed_id": "aulie",
+      "breed_name": "Аулиеатинская",
+      "breed_name_ky": "Аулиеата тукуму",
+      "product_id": "meat",
+      "product_name": "Мясо (привес)",
+      "product_name_ky": "Эт (кошумча салмак)",
+      "yield_per_head": 0.22,
+      "annual_cost_per_head": 32000,
+      "feed_need": {
+        "pasture_grass": 6.8,
+        "alfalfa": 1.0,
+        "silage_corn": 3.2,
+        "barley": 0.65
+      }
+    },
+    {
+      "breed_id": "schwyz",
+      "breed_name": "Швицкая",
+      "breed_name_ky": "Швиц тукуму",
+      "product_id": "milk",
+      "product_name": "Молоко",
+      "product_name_ky": "Сүт",
+      "yield_per_head": 4.6,
+      "annual_cost_per_head": 35000,
+      "feed_need": {
+        "pasture_grass": 7.6,
+        "alfalfa": 2.0,
+        "silage_corn": 6.0,
+        "barley": 1.5
+      }
+    },
+    {
+      "breed_id": "kyrgyz_meat",
+      "breed_name": "Кыргызская мясная",
+      "breed_name_ky": "Кыргыз эт тукуму",
+      "product_id": "meat",
+      "product_name": "Мясо (привес)",
+      "product_name_ky": "Эт (кошумча салмак)",
+      "yield_per_head": 0.26,
+      "annual_cost_per_head": 33000,
+      "feed_need": {
+        "pasture_grass": 8.5,
+        "alfalfa": 0.7,
+        "silage_corn": 2.2,
+        "barley": 0.5
+      }
+    }
+  ],
+  "plausibility": {
+    "max_milk_t_per_ha": 1.2,
+    "max_meat_t_per_ha": 0.12
+  }
+}

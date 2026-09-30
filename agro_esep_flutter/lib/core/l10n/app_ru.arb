@@ -1,0 +1,596 @@
+{
+  "@@locale": "ru",
+  "appTitle": "AgroESEP",
+  "navHome": "Главная",
+  "navModel": "Модель",
+  "navAbout": "Проект",
+  "navCalculator": "Расчёт",
+  "navHistory": "История",
+  "instituteName": "Институт математики НАН КР",
+  "contactsTitle": "Контакты",
+  "contactsLink": "Контакты института",
+  "contactsAddress": "Адрес",
+  "contactsPhone": "Телефон",
+  "contactsEmail": "Электронная почта",
+  "contactsHead": "Руководитель проекта",
+  "onlineCalculation": "Онлайн-расчёт",
+  "ctaCalculate": "Рассчитать оптимальное решение",
+  "ctaAbout": "О проекте",
+  "ctaStart": "Начать расчёт",
+  "ctaNext": "Дальше",
+  "howItWorksTitle": "Как работает калькулятор?",
+  "howItWorksSubtitle": "Четыре шага, около пяти минут.",
+  "modelFormulas": "Формулы",
+  "modelGlossary": "Обозначения",
+  "aboutTab": "О проекте",
+  "goalsTab": "Цель и задачи",
+  "resultsTab": "Результаты",
+  "relevanceTitle": "Актуальность",
+  "goalTitle": "Цель проекта",
+  "tasksTitle": "Основные задачи",
+  "tasksBadge": "задачи",
+  "expectedResultsTitle": "Ожидаемые результаты",
+  "resultsBadge": "результаты",
+  "practicalValueTitle": "Практическая значимость",
+  "valueBadge": "значимость",
+  "wizardTitle": "Расчёт хозяйства",
+  "wizardStep": "ШАГ {current} ИЗ {total}",
+  "@wizardStep": {
+    "placeholders": {
+      "current": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "stepFarmTypeQuestion": "Какое у вас хозяйство?",
+  "stepFarmTypeHint": "От этого зависят нормативы, по которым выполняется расчёт.",
+  "stepLandQuestion": "Сколько у вас земли?",
+  "stepLandHint": "Площадь в гектарах по каждому виду угодий.",
+  "stepLandEmptyHint": "Заполняется только то, что есть. Пустое поле не ошибка: у большинства хозяйств не все виды угодий сразу.",
+  "stepLandTotal": "Всего {area} га. Если часть земли арендована, укажите её вместе с собственной.",
+  "@stepLandTotal": {
+    "placeholders": {
+      "area": {
+        "type": "String"
+      }
+    }
+  },
+  "stepPlanQuestion": "Сколько продукции планируете получить?",
+  "stepPlanHint": "За год. Заполните только то, что собираетесь производить.",
+  "stepPlanWarningFootnote": "Предупреждение не блокирует расчёт: если значение верное, продолжайте.",
+  "stepBreedsQuestion": "Какие породы вы можете содержать?",
+  "stepBreedsHint": "Отметьте доступные. Под названием — нормативы института. Можно указать, сколько голов вы способны содержать.",
+  "stepBreedsUncovered": "Ни одна выбранная порода не даёт: {products}. Добавьте подходящую породу или уберите этот вид из плана.",
+  "@stepBreedsUncovered": {
+    "placeholders": {
+      "products": {
+        "type": "String"
+      }
+    }
+  },
+  "stepReviewTitle": "Проверьте данные",
+  "stepReviewQuestion": "Всё верно?",
+  "stepReviewHint": "Любой блок можно поправить на месте, не возвращаясь по всей цепочке.",
+  "stepReviewEdit": "ИЗМЕНИТЬ",
+  "blockFarm": "ХОЗЯЙСТВО",
+  "blockFarmType": "Тип",
+  "blockLand": "УГОДЬЯ",
+  "blockPlan": "ПЛАН ПРОИЗВОДСТВА",
+  "blockBreeds": "ПОРОДЫ",
+  "yes": "да",
+  "ctaSolve": "Рассчитать оптимальный вариант",
+  "ctaSolveSubtitle": "расчёт занимает несколько секунд, интернет не нужен",
+  "solvingTitle": "Подбираем оптимальный вариант",
+  "solvingDescription": "Перебираются сочетания культур и поголовья, чтобы суммарные затраты оказались наименьшими.",
+  "solvingStageChecked": "Данные проверены",
+  "solvingStageNormatives": "Нормативы подставлены",
+  "solvingStageOptimizing": "Решается задача оптимизации",
+  "resultTitle": "Рекомендация",
+  "resultCostLabel": "ЗАТРАТЫ ЗА ГОД",
+  "resultWhatToSow": "ЧТО ПОСЕЯТЬ",
+  "resultLandUsage": "{used} из {total} га",
+  "@resultLandUsage": {
+    "placeholders": {
+      "used": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "resultUnused": "не занято",
+  "resultHowManyHeads": "СКОЛЬКО ГОЛОВ СОДЕРЖАТЬ",
+  "ctaExplain": "Как это посчитано",
+  "ctaOpenHistory": "Сохранено — открыть мои расчёты",
+  "ctaSavePdf": "Сохранить в PDF",
+  "explainTitle": "Как это посчитано",
+  "explainLandUse": "Использование земли",
+  "explainFeedBalance": "Кормовой баланс",
+  "explainCostStructure": "Структура затрат",
+  "explainPlanFor": "План: {product}",
+  "@explainPlanFor": {
+    "placeholders": {
+      "product": {
+        "type": "String"
+      }
+    }
+  },
+  "explainFulfilled": "выполнен",
+  "explainNotFulfilled": "не выполнен",
+  "explainObserved": "соблюдён",
+  "infeasibleTitle": "Такой план на этой земле не выполнить",
+  "infeasibleDescription": "Годовой рацион поголовья, нужного для такого плана, не помещается на ваших угодьях.",
+  "infeasibleMissingLand": "столько пашни не хватает при нынешней урожайности",
+  "ctaReducePlan": "Уменьшить план",
+  "ctaChangeLand": "Изменить угодья",
+  "failedOffline": "Нет подключения",
+  "failedGeneric": "Не удалось выполнить расчёт",
+  "failedDataKept": "Введённые данные сохранены — возвращаться к началу не нужно.",
+  "ctaRetry": "Повторить расчёт",
+  "ctaBackToData": "Вернуться к данным",
+  "errorNoConnection": "Нет подключения. Расчёт сохранён и будет отправлен, когда появится связь.",
+  "errorTimeout": "Сервис расчёта не ответил вовремя. Попробуйте ещё раз.",
+  "errorServer": "Не удалось выполнить расчёт. Проверьте введённые данные или попробуйте ещё раз.",
+  "historyTitle": "Мои расчёты",
+  "historyEmptyTitle": "Пока нет сохранённых расчётов",
+  "historyEmptyDescription": "Каждый выполненный расчёт сохраняется на телефоне и потом открывается без интернета.",
+  "historyQueuedBanner": "{count, plural, one{{count} расчёт ждёт отправки} few{{count} расчёта ждут отправки} other{{count} расчётов ждут отправки}}. Расчёт уйдёт сам, как только появится связь.",
+  "@historyQueuedBanner": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "historyNewCalculation": "Новый расчёт",
+  "historyDelete": "Удалить расчёт",
+  "historyCosts": "Затраты",
+  "historyHeads": "Поголовье",
+  "historyHeadsValue": "{count} голов",
+  "@historyHeadsValue": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "historyNoResult": "Результата пока нет",
+  "historyInfeasible": "План на этой земле не выполнить",
+  "statusDone": "готов",
+  "statusQueued": "в очереди",
+  "statusInfeasible": "невыполним",
+  "statusFailed": "ошибка",
+  "demoNormativesWarning": "Расчёт выполняется на демонстрационных нормативах ({version}). Реальная нормативная база института ещё не подключена.",
+  "@demoNormativesWarning": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "normativesLine": "Нормативы {version}",
+  "@normativesLine": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "solverLine": "решатель {version}",
+  "@solverLine": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "unitHa": "га",
+  "unitTons": "т",
+  "unitTonsPerYear": "т/год",
+  "unitSom": "сом",
+  "wizardTitleShort": "Расчёт",
+  "noResult": "Нет результата",
+  "notSavedYet": "Расчёт ещё не сохранён",
+  "unitPerHectare": "га",
+  "stepLandTotalNote": "Если часть земли арендована, укажите её вместе с собственной.",
+  "stepBreedsFix": "Добавьте подходящую породу или уберите этот вид из плана.",
+  "stepReviewAllCorrect": "Всё верно?",
+  "solvingDescriptionFull": "Приложение перебирает сочетания культур и поголовья, чтобы суммарные затраты оказались наименьшими. Расчёт идёт на вашем телефоне.",
+  "resultCostStructure": "СТРУКТУРА ЗАТРАТ",
+  "resultCrops": "Растениеводство",
+  "resultLivestock": "Содержание животных",
+  "resultOtherCrops": "Прочие культуры",
+  "infeasibleFullDescription": "Годовой рацион поголовья, нужного для такого плана, не помещается на ваших угодьях.",
+  "errorUnknown": "Неизвестная ошибка.",
+  "historyEmptyFull": "Каждый выполненный расчёт сохраняется на телефоне. Приложение работает полностью без интернета.",
+  "compareAction": "Сравнить",
+  "compareCancel": "Отмена",
+  "compareSelected": "Сравнить выбранные",
+  "compareTitle": "Сравнение",
+  "compareBefore": "РАНЬШЕ",
+  "compareAfter": "ПОЗЖЕ",
+  "comparePerYear": "сом в год",
+  "compareCropChanges": "ЧТО МЕНЯЕТСЯ В ПОСЕВАХ",
+  "compareHerdChanges": "ЧТО МЕНЯЕТСЯ В ПОГОЛОВЬЕ",
+  "diffNew": "новое",
+  "diffRemoved": "убрано",
+  "diffUnchanged": "без изменений",
+  "diffMore": "больше",
+  "diffLess": "меньше",
+  "unitHeads": "гол.",
+  "modelTitle": "Модель",
+  "farmPeasant": "Крестьянское (фермерское)",
+  "farmPeasantHint": "семейное хозяйство, как правило до 50 га",
+  "farmCooperative": "Кооператив",
+  "farmCooperativeHint": "объединение нескольких хозяйств",
+  "farmEnterprise": "Агропредприятие",
+  "farmEnterpriseHint": "сельхозорганизация с наёмными работниками",
+  "farmHousehold": "Личное подсобное",
+  "farmHouseholdHint": "небольшое хозяйство для собственных нужд",
+  "explainLandUsed": "Занято {percent} % угодий. Незанятая земля означает, что на ней корма обходятся дороже.",
+  "@explainLandUsed": {
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
+  "explainFeedText": "Выращено и куплено не меньше, чем требуется на годовой рацион выбранного поголовья. Излишек не планируется: каждая лишняя единица площади увеличивала бы затраты.",
+  "explainCostText": "Минимизируется сумма затрат на посевы, на содержание животных и на закупку кормов — это и есть целевая функция модели.",
+  "explainPlanText": "{produced} т при плане {planned} т.",
+  "@explainPlanText": {
+    "placeholders": {
+      "produced": {
+        "type": "String"
+      },
+      "planned": {
+        "type": "String"
+      }
+    }
+  },
+  "historyStatsHeads": "{count} голов",
+  "@historyStatsHeads": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "compareStats": "{heads} голов · {area} га посевов",
+  "@compareStats": {
+    "placeholders": {
+      "heads": {
+        "type": "int"
+      },
+      "area": {
+        "type": "String"
+      }
+    }
+  },
+  "compareCheaperBy": "Второй вариант дешевле на {percent} %.",
+  "@compareCheaperBy": {
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
+  "compareDearerBy": "Второй вариант дороже на {percent} %.",
+  "@compareDearerBy": {
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
+  "comparePerYearAmount": "{amount} сом в год",
+  "@comparePerYearAmount": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "compareWas": "было {value}",
+  "@compareWas": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "compareSelectedCount": "Выбрано: {count} из 2",
+  "@compareSelectedCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "failedServiceUnreachable": "Сервис расчёта недоступен",
+  "errorServiceUnreachable": "Интернет есть, но сервис расчёта не отвечает. Расчёт сохранён — попробуйте позже или сообщите разработчику.",
+  "contactsNormativesBase": "Нормативная база: {version}",
+  "@contactsNormativesBase": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "homeTitleShort": "ММЭ ИМ НАН КР",
+  "modelFormulaObjective": "Целевая функция — минимум суммарных затрат",
+  "modelFormulaLandLimit": "Ограничение по размеру посевных площадей",
+  "modelFormulaFeedBalance": "Кормовой баланс: выращено не меньше, чем требуется",
+  "modelFormulaPlan": "Выполнение плана производства продукции",
+  "modelFormulaNonNegative": "Неотрицательность посевных площадей",
+  "modelFormulaInteger": "Поголовье — целое неотрицательное число",
+  "modelGlossaryArea": "размер посевной площади k-й категории в хозяйстве",
+  "modelGlossaryYield": "урожайность j-го вида культуры на k-й категории площади",
+  "modelGlossaryCropCost": "затраты на единицу k-й площади под j-й вид культуры",
+  "modelGlossaryFeedNeed": "годовая потребность в j-м виде продукции растениеводства на одно животное l-й породы при производстве h-го вида продукции",
+  "modelGlossaryYieldPerHead": "объём продукции h-го вида от одного животного l-й породы",
+  "modelGlossaryPlan": "запланированный объём продукции h-го вида",
+  "modelGlossaryHeadCost": "годовой расход на одно животное l-й породы",
+  "modelGlossaryUnknownArea": "искомое: размер площади k под j-й вид культуры",
+  "modelGlossaryUnknownHeads": "искомое: количество животных l-й породы для продукции h",
+  "explainFormulaLand": "(1.2)  сумма x[k][j] по культурам ≤ s[k]",
+  "explainFormulaPlan": "(1.4)  сумма v[h][l]·y[h][l] ≥ b[h]",
+  "explainFormulaFeed": "(1.3)  сумма a[k][j]·x[k][j] ≥ сумма q[j][h][l]·y[h][l]",
+  "explainFormulaCost": "(1.1)  минимум суммы c[k][j]·x[k][j] + d[h][l]·y[h][l] + p[j]·z[j]",
+  "plausibilityTooMuch": "Для {area} га это очень много. Обычно с такой площади получают не больше {max} т. Возможно, указаны литры вместо тонн?",
+  "@plausibilityTooMuch": {
+    "placeholders": {
+      "area": {
+        "type": "String"
+      },
+      "max": {
+        "type": "String"
+      }
+    }
+  },
+  "compareIncomparable": "Расчёты выполнены на разных нормативах ({before} и {after}). Разница в затратах отражает смену базы, а не решение хозяйства.",
+  "@compareIncomparable": {
+    "placeholders": {
+      "before": {
+        "type": "String"
+      },
+      "after": {
+        "type": "String"
+      }
+    }
+  },
+  "pdfTitle": "Расчёт оптимального плана хозяйства",
+  "pdfDate": "Дата расчёта: {date}",
+  "@pdfDate": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "pdfPage": "стр. {page} из {total}",
+  "@pdfPage": {
+    "placeholders": {
+      "page": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "pdfNoResult": "Результат расчёта отсутствует.",
+  "pdfInputSection": "Исходные данные",
+  "pdfFarmType": "Тип хозяйства",
+  "pdfAvailableBreeds": "Доступные породы",
+  "pdfTotalCost": "СУММАРНЫЕ ЗАТРАТЫ ЗА ГОД",
+  "pdfWhatToSow": "Что посеять — {used} из {total} га",
+  "@pdfWhatToSow": {
+    "placeholders": {
+      "used": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "pdfColCrop": "Культура",
+  "pdfColLand": "Угодья",
+  "pdfColArea": "Площадь, га",
+  "pdfUnusedLand": "Не занято {area} га: на этих угодьях корма обходятся дороже.",
+  "@pdfUnusedLand": {
+    "placeholders": {
+      "area": {
+        "type": "String"
+      }
+    }
+  },
+  "pdfHowManyHeads": "Сколько голов содержать — всего {heads}",
+  "@pdfHowManyHeads": {
+    "placeholders": {
+      "heads": {
+        "type": "int"
+      }
+    }
+  },
+  "pdfColBreed": "Порода",
+  "pdfColDirection": "Направление",
+  "pdfColHeads": "Голов",
+  "pdfCostStructure": "Структура затрат",
+  "pdfColItem": "Статья",
+  "pdfColShare": "Доля",
+  "pdfColSum": "Сумма, сом",
+  "pdfMissingLand": "Не хватает примерно {area} га пашни при нынешней урожайности.",
+  "@pdfMissingLand": {
+    "placeholders": {
+      "area": {
+        "type": "String"
+      }
+    }
+  },
+  "pdfDemoWarning": "ВНИМАНИЕ: расчёт выполнен на демонстрационных нормативах. Реальная нормативная база института не подключена.",
+  "adminTitle": "Нормативная база",
+  "adminSavedNotice": "База сохранена. Перезапустите приложение, чтобы расчёты пошли по новым нормативам.",
+  "adminResetNotice": "Возврат к встроенной базе. Перезапустите приложение.",
+  "adminApply": "Применить эту базу",
+  "adminCancel": "Отменить",
+  "adminReadingFile": "Читаем файл…",
+  "adminPickFile": "Загрузить файл Excel",
+  "adminResetToBundled": "Вернуться к встроенной базе",
+  "adminCurrentBase": "ДЕЙСТВУЮЩАЯ БАЗА",
+  "adminVersion": "Версия",
+  "adminSource": "Источник",
+  "adminSourceBundled": "встроена в приложение",
+  "adminSourceImported": "загружена вручную",
+  "adminLandsCount": "Угодий",
+  "adminCropsCount": "Культур",
+  "adminBreedsCount": "Пород и направлений",
+  "adminDemoWarning": "База помечена как демонстрационная — расчёты нельзя предъявлять хозяйствам.",
+  "adminPreviewTitle": "ФАЙЛ ПРОЧИТАН — ПРОВЕРЬТЕ",
+  "adminPreviewCrops": "Культуры: {list}",
+  "@adminPreviewCrops": {
+    "placeholders": {
+      "list": {
+        "type": "String"
+      }
+    }
+  },
+  "adminPreviewBreeds": "Породы: {list}",
+  "@adminPreviewBreeds": {
+    "placeholders": {
+      "list": {
+        "type": "String"
+      }
+    }
+  },
+  "adminIssuesTitle": "{count, plural, one{Файл не загружен — {count} замечание:} few{Файл не загружен — {count} замечания:} other{Файл не загружен — {count} замечаний:}}",
+  "@adminIssuesTitle": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "adminIssuesMore": "…и ещё {count}",
+  "@adminIssuesMore": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "adminFormatTitle": "ФОРМАТ ФАЙЛА",
+  "adminFormatIntro": "Файл .xlsx с листами (первая строка — заголовки):",
+  "adminFormatLands": "id · Название",
+  "adminFormatCrops": "id · Название · Угодье · Урожайность · Затраты · Цена закупки",
+  "adminFormatProducts": "id · Название · Единица",
+  "adminFormatBreeds": "Порода id · Порода · Продукция id · Выход · Затраты · далее по столбцу на каждую культуру — потребность в кормах",
+  "adminFormatMeta": "version · значение",
+  "adminFormatKyColumns": "Кыргызские названия — необязательные столбцы «Название (кырг.)», «Единица (кырг.)» и «Порода (кырг.)». Их можно дописать в конец листа: столбцы ищутся по заголовку, а не по номеру. Без них кыргызский интерфейс покажет русские названия справочника.",
+  "adminFormatNote": "Одна культура занимает столько строк, на скольких угодьях растёт. Сохраняйте именно .xlsx: CSV из Windows-версии Excel портит кириллицу.",
+  "importIssueAtRow": "«{sheet}», строка {row}: {message}",
+  "@importIssueAtRow": {
+    "placeholders": {
+      "sheet": {
+        "type": "String"
+      },
+      "row": {
+        "type": "int"
+      },
+      "message": {
+        "type": "String"
+      }
+    }
+  },
+  "importIssueAtSheet": "«{sheet}»: {message}",
+  "@importIssueAtSheet": {
+    "placeholders": {
+      "sheet": {
+        "type": "String"
+      },
+      "message": {
+        "type": "String"
+      }
+    }
+  },
+  "importFileLabel": "файл",
+  "importFileUnreadable": "не удалось прочитать: {error}",
+  "@importFileUnreadable": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "importSheetMissing": "лист отсутствует в файле",
+  "importSheetEmpty": "лист пуст",
+  "importNoRows": "нет ни одной строки",
+  "importIdAndNameRequired": "нужны и id, и название",
+  "importUnknownLand": "неизвестное угодье «{id}»",
+  "@importUnknownLand": {
+    "placeholders": {
+      "id": {
+        "type": "String"
+      }
+    }
+  },
+  "importNumbersRequired": "урожайность и затраты должны быть числами",
+  "importNameRequired": "не указано название",
+  "importUnknownCropInHeader": "неизвестная культура в заголовке: «{id}»",
+  "@importUnknownCropInHeader": {
+    "placeholders": {
+      "id": {
+        "type": "String"
+      }
+    }
+  },
+  "importFeedColumnsMissing": "начиная с шестого столбца должны идти id культур — потребность в кормах",
+  "importUnknownProduct": "неизвестная продукция «{id}»",
+  "@importUnknownProduct": {
+    "placeholders": {
+      "id": {
+        "type": "String"
+      }
+    }
+  },
+  "importYieldMustBePositive": "выход продукции должен быть больше нуля",
+  "importCostMustBeNumber": "затраты на голову должны быть числом",
+  "importFeedNeedEmpty": "не заполнена потребность ни в одном корме",
+  "stepBreedsLimitLabel": "Не больше",
+  "stepBreedsLimitHint": "Оставьте пустым, если поголовье не ограничено",
+  "resultFeedPurchase": "ЧТО ПРИДЁТСЯ ДОКУПИТЬ",
+  "resultFeedPurchaseHint": "Этих кормов своя земля не даёт — модель посчитала их по рыночной цене.",
+  "resultPurchasedFeed": "Покупные корма",
+  "resultSelfSufficient": "Хозяйство полностью обеспечивает себя кормами.",
+  "modelFormulaBreedLimit": "Предел поголовья по породе, если хозяйство его задало",
+  "modelFormulaPurchase": "Закупка кормов неотрицательна",
+  "modelGlossaryFeedPrice": "цена тонны j-го корма на рынке",
+  "modelGlossaryBreedLimit": "предельное поголовье l-й породы в хозяйстве",
+  "modelGlossaryUnknownPurchase": "искомое: сколько тонн j-го корма придётся докупить",
+  "explainFeedPurchaseTitle": "Закупка кормов",
+  "explainFeedPurchaseNone": "не потребовалась",
+  "explainFeedPurchaseSome": "{tons} т на {cost} сом",
+  "@explainFeedPurchaseSome": {
+    "placeholders": {
+      "tons": {
+        "type": "String"
+      },
+      "cost": {
+        "type": "String"
+      }
+    }
+  },
+  "explainFeedPurchaseTextNone": "Весь рацион закрыт своими посевами и пастбищами. Покупать корма не нужно.",
+  "explainFeedPurchaseTextSome": "Своей земли на весь рацион не хватает. Модель сравнила стоимость гектара и цену корма на рынке и выбрала то, что дешевле.",
+  "explainFormulaPurchase": "(1.3)  сумма a[k][j]·x[k][j] + z[j] ≥ сумма q[j][h][l]·y[h][l]",
+  "stepLandPastureNote": "Пастбища учитываются наравне с пашней: подножный корм — самая дешёвая часть рациона.",
+  "pdfFeedPurchase": "Что придётся докупить",
+  "pdfColFeed": "Корм",
+  "pdfColTons": "Тонн",
+  "pdfSelfSufficient": "Закупка кормов не требуется: хозяйство обеспечивает себя полностью."
+}

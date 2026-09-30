@@ -1,0 +1,8 @@
+Golos Text распространяется по лицензии SIL Open Font License 1.1.
+Автор: Paratype. Полный текст лицензии: https://openfontlicense.org
+
+Roboto распространяется по лицензии Apache License 2.0.
+Автор: Google. Полный текст: https://www.apache.org/licenses/LICENSE-2.0
+
+Оба шрифта включены в приложение как ресурсы: приложение работает
+без интернета, и шрифт должен быть доступен с первого запуска.
